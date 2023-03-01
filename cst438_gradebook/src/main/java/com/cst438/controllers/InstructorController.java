@@ -22,6 +22,24 @@ public class InstructorController {
 	@Autowired
 	AssignmentRepository assignmentRepository;
 	
+	@GetMapping("/assignment/{id}")
+	public AssignmentListDTO changeAssignmentName( @PathVariable("id") Integer assignmentId) {
+		String email = "dwisneski@csumb.edu";
+		Assignment assignment = checkAssignment(assignmentId, email);
+		
+		AssignmentListDTO  al = new AssignmentListDTO ();
+		al.assignmentId= assignmentId;
+		al.assignmentName = assignment.getName();
+		
+		if (al != null) {
+				al.assignmentName = assignment.getName();
+		} 
+		//al.add(grade);
+		
+		
+		return al;
+	}
+	
 	
 	@GetMapping("/assignment/{id}/")
 	public  Assignment deleteAssignment( @PathVariable("id") Integer assignmentId ) {
