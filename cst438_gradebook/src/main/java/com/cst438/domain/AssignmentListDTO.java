@@ -7,6 +7,8 @@ import java.util.ArrayList;
  */
 public class AssignmentListDTO {
 
+	
+
 	public static class AssignmentDTO {
 		public int assignmentId;
 		public String assignmentName;
@@ -66,6 +68,8 @@ public class AssignmentListDTO {
 	}
 
 	public ArrayList<AssignmentDTO> assignments = new ArrayList<>();
+	public Integer assignmentId;
+	public String assignmentName;
 
 	@Override
 	public String toString() {
