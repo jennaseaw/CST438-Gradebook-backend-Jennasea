@@ -156,6 +156,13 @@ public class GradeBookController {
 		
 	}
 	
+//	@PostMapping("/gradebook")
+//	@Transactional
+//	public voic addAssignment (@RequestBody Assignment assignment) {
+//		String name = assignment.getName();
+//		assignmentRespository.findByName(name);
+//	}
+	
 	private Assignment checkAssignment(int assignmentId, String email) {
 		// get assignment 
 		Assignment assignment = assignmentRepository.findById(assignmentId).orElse(null);
