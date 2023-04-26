@@ -31,6 +31,8 @@ public class InstructorController {
 	@Autowired
 	AssignmentRepository assignmentRepository;
 	
+	//added AddAssignment
+	
 	@PostMapping("/schedule")
 	@Transactional
 	public AssignmentDTO addAssignment(@RequestBody int assignmentId, int courseId, String assignmentName, String dueDate,
