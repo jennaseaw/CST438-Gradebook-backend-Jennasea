@@ -103,8 +103,8 @@ public class EndToEndTestAddAssignment {
 					Thread.sleep(SLEEP_DURATION);
 
 					/*
-					* verify that new course shows in schedule.
-					* get the title of all courses listed in schedule
+					* verify that assignment is in assignmentgradeRepository
+					* get the title of assignments in gradebook
 					*/ 
 				
 					Assignment assignment = assignmentRepository.findById(TEST_ID).get();
